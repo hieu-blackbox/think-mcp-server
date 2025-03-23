@@ -1,0 +1,42 @@
+# Basic server information
+name: think-mcp-server
+displayName: Think Tool Server
+description: "A structured reasoning tool for AI assistants that provides a dedicated space for complex thinking and analysis"
+version: "1.0.0"
+language: typescript
+
+# Server metadata
+tags:
+  - thinking
+  - reasoning
+  - analysis
+  - productivity
+
+# Runtime configuration
+runtime:
+  command: npx
+  args:
+    - tsx
+    - src/server.ts
+
+# Dependencies
+dependencies:
+  - fastmcp
+  - zod
+
+# Deployment settings
+deployment:
+  memoryLimit: 256Mi
+  timeoutSeconds: 300
+
+# Documentation
+documentation:
+  usage: |
+    The Think Tool provides a dedicated space for structured reasoning.
+    Use it when working with complex information that needs deeper analysis.
+  examples:
+    - description: "Basic thinking example"
+      code: |
+        client.callTool("think", {
+          thought: "Breaking down this problem step by step..."
+        })
