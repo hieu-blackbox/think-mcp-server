@@ -25,8 +25,13 @@ server.addTool({
 
 // Start the server with stdio transport
 server.start({
-  transportType: "stdio",
+  transportType: "sse",
+  sse: {
+    endpoint: "/sse",
+    port: 8888,
+  },
 });
+
 
 // Use console.error instead of console.log - this writes to stderr which won't interfere with the protocol
 console.error("Think Tool Server is running...");
