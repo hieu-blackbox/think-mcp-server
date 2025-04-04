@@ -28,7 +28,7 @@ server.start({
   transportType: "sse",
   sse: {
     endpoint: "/sse",
-    port: 8888,
+    port: process.env.PORT || 3001,
   },
 });
 
